@@ -1,8 +1,10 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 
 public class DictionaryAppi {
-
+    private static Map<String, String> dictionary = new HashMap<>();
     private static Scanner scanner = new Scanner(System.in);
 
 
@@ -104,5 +106,20 @@ public class DictionaryAppi {
         DictionaryAppi.put(word, definition);
         System.out.println("Word added to the dictionary.");
     }
-}
+
+    private static void deleteWord() {
+
+        System.out.print("Enter the word to delete: ");
+        String word = scanner.nextLine();
+        if (dictionary.containsKey(word)) {
+            dictionary.remove(word);
+            System.out.println("Word deleted from the dictionary.");
+
+        } else {
+
+            System.out.println("Word not found in the dictionary.");
+        }
+    }
+
+
 

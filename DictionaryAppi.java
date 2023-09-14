@@ -138,5 +138,15 @@ public class DictionaryAppi {
         }
     }
 
+    private static void viewDictionary() {
 
+        System.out.println("Dictionary Contents:");
+
+        for (Map.Entry<String, String> entry : dictionary.entrySet()) {
+
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+
+        }
+
+    }
 

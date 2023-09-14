@@ -121,5 +121,22 @@ public class DictionaryAppi {
         }
     }
 
+    private static void editWord() {
+
+        System.out.print("Enter the word to edit: ");
+        String word = scanner.nextLine();
+        if (dictionary.containsKey(word)) {
+            System.out.print("Enter the new definition: ");
+            String newDefinition = scanner.nextLine();
+            dictionary.put(word, newDefinition);
+            System.out.println("Word edited successfully.");
+
+        } else {
+
+            System.out.println("Word not found in the dictionary.");
+
+        }
+    }
+
 
 

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class DictionaryAppi {
 
+public class DictionaryAppi {
 
     private static Scanner scanner = new Scanner(System.in);
 
@@ -49,7 +49,7 @@ public class DictionaryAppi {
 
                 case 5:
 
-                    System.out.println("function for asearching word");
+                    System.out.println("function for searching word");
 
                     break;
 
@@ -92,8 +92,17 @@ public class DictionaryAppi {
         System.out.println("6. Exit");
 
         System.out.print("Enter your choice: ");
-
-
     }
 
+
+    private static void addWord() {
+
+        System.out.print("Enter the word to add: ");
+        String word = scanner.nextLine();
+        System.out.print("Enter the definition: ");
+        String definition = scanner.nextLine();
+        DictionaryAppi.put(word, definition);
+        System.out.println("Word added to the dictionary.");
+    }
 }
+

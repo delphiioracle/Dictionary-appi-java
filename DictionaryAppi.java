@@ -138,5 +138,33 @@ public class DictionaryAppi {
         }
     }
 
+    private static void viewDictionary() {
+
+        System.out.println("Dictionary Contents:");
+
+        for (Map.Entry<String, String> entry : dictionary.entrySet()) {
+
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+
+        }
+
+    }
+    private static void searchWord() {
+        System.out.print("Enter the word to search for: ");
+        String word = scanner.nextLine();
+
+        if (dictionary.containsKey(word)) {
+            System.out.println("Definition: " + dictionary.get(word));
+
+        } else {
+            System.out.println("Word not found in the dictionary.");
+        }
+
+    }
+
+}
+
+
+
 
 
